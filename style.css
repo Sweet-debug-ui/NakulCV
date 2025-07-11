@@ -1,0 +1,320 @@
+:root {
+    --primary: #A2D2FF;
+    --accent: #FFAFCC;
+    --bg: #FFFFFF;
+    --secondary: #F7F7F7;
+    --text: #333333;
+    --muted: #7D7D7D;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.navbar {
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.hero-section {
+    background-color: var(--secondary);
+    margin-top: 2rem;
+    border-radius: 15px;
+}
+
+/* Replace your existing .profile-img-container and related styles with these: */
+.profile-img-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #A2D2FF, #FFAFCC);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    animation: float 3s ease-in-out infinite;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+#nak.profile-image {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    transition: transform 0.3s ease;
+}
+
+#nak.profile-image:hover {
+    transform: scale(1.05);
+}
+
+/* Keep your existing float animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.profile-img-placeholder {
+    width: 280px;
+    height: 280px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-size: 1.2rem;
+}
+
+.section-title {
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent);
+}
+
+.skill-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.skill-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.skill-list li {
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.skill-list li::before {
+    content: '•';
+    color: var(--accent);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.objective-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    max-width: 800px;
+}
+
+.footer {
+    background-color: var(--secondary);
+    margin-top: 3rem;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #8ab8e6;
+    border-color: #8ab8e6;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+    }
+    
+    .profile-img-container {
+        margin-top: 2rem;
+    }
+}
+/* Add to style.css */
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Animated gradient background */
+.bg-gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    z-index: -2;
+}
+
+/* Floating blobs */
+.bg-blob {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.15;
+    z-index: -1;
+    animation: float 15s infinite ease-in-out;
+}
+
+.blob-1 {
+    width: 400px;
+    height: 400px;
+    background: #A2D2FF;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.blob-2 {
+    width: 300px;
+    height: 300px;
+    background: #FFAFCC;
+    bottom: 15%;
+    right: 10%;
+    animation-delay: 3s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(20px, 20px); }
+    50% { transform: translate(0, 30px); }
+    75% { transform: translate(-20px, 10px); }
+}
+/* Modern card styling */
+.enhanced-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+    position: relative;
+}
+
+.enhanced-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #A2D2FF, #FFAFCC);
+}
+
+.enhanced-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.enhanced-card .card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #A2D2FF, #FFAFCC);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+/* Typography enhancements */
+.display-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, #A2D2FF, #FFAFCC);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.section-header {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2.5rem;
+}
+
+.section-header::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #A2D2FF, #FFAFCC);
+    border-radius: 2px;
+}
+/* Button styles */
+.btn-3d {
+    position: relative;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+}
+
+.btn-3d:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 0 rgba(0, 0, 0, 0.1);
+}
+
+.btn-3d:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.btn-gradient {
+    background: linear-gradient(135deg, #A2D2FF, #FFAFCC);
+    color: white;
+    border: none;
+}
+
+.btn-outline-gradient {
+    background: transparent;
+    border: 2px solid transparent;
+    border-image: linear-gradient(135deg, #A2D2FF, #FFAFCC);
+    border-image-slice: 1;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-gradient:hover {
+    background: linear-gradient(135deg, #A2D2FF, #FFAFCC);
+    color: white;
+}

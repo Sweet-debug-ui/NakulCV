@@ -1,0 +1,128 @@
+:root {
+    --primary: #A2D2FF;
+    --accent: #FFAFCC;
+    --bg: #FFFFFF;
+    --secondary: #F7F7F7;
+    --text: #333333;
+    --muted: #7D7D7D;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.navbar {
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.section-title {
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent);
+}
+
+.contact-info {
+    background-color: var(--secondary);
+    border-radius: 10px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.contact-details h4 {
+    margin-bottom: 0.3rem;
+    color: var(--primary);
+}
+
+.social-icon {
+    color: var(--primary);
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: var(--accent);
+}
+
+.contact-form {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.form-control {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(162, 210, 255, 0.25);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: #8ab8e6;
+    border-color: #8ab8e6;
+}
+
+.footer {
+    background-color: var(--secondary);
+    margin-top: 3rem;
+}
+
+/* Animation for contact items */
+.contact-item {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.contact-item:nth-child(1) { animation-delay: 0.1s; }
+.contact-item:nth-child(2) { animation-delay: 0.3s; }
+.contact-item:nth-child(3) { animation-delay: 0.5s; }
